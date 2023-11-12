@@ -14,8 +14,11 @@ const publicPath = path.join(__dirname, '../public')
 const jwt = require("jsonwebtoken");
 console.log(publicPath);
 
-app.set('view engine', 'hbs')
-app.set('views', templatePath)
+
+//app.set('view engine', 'hbs')
+//app.set('views', templatePath)
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
 app.use(express.static(publicPath))
 
 
